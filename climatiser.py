@@ -83,8 +83,8 @@ while True:
     # dans une autre application :
     mon_csv.close()
 
-#    if ((abs(T_ext-T_int) <= 0.1) and (not atteint)):
-    if not atteint:
+    # On détecte le moment où les températures vont se croiser :
+    if ((not atteint) and (abs(T_ext-T_int) <= 0.1)):
         atteint = True
 
         message = ">>> Température cible atteinte ! " + "%.1f°C"%T_ext
