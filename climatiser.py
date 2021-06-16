@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 '''
-Vincent MAGNIN, 20-09-2020, modifié le 30-10-2020
+Vincent MAGNIN, 20-09-2020, modifié le 16-06-2021
 Un script python utilisant deux capteurs de température/humidité BeeWi SmartClim
 pour comparer les températures intérieure et extérieure, avec alerte quand les
 deux sont égales (utile lors des canicules).
-* Testé avec Python 3.8.5 sous Kubuntu 20.04
+* Testé avec Python 3.9.5 sous Kubuntu 21.04
 * pylint *.py : 5.81/10
 * Dépendances :
 $ sudo apt install espeak-ng mbrola-fr1 kdeconnect sox
@@ -72,8 +72,17 @@ while True:
 
     if iteration == 0:
         print("Batteries : Ext=", B_ext, "%    Int=", B_int, "%")
+        # Le téléphone portable est-il connecté ?
+        ps = subprocess.run(["kdeconnect-cli", "--ping", "--device", ID_MOBILE, "2>", "/dev/null"])
+        if ps.returncode != 0:
+            print(">>> mobile non connecté...")
 
     print("%4d)"%iteration, heure, "| Ext", "%.1f°C"%T_ext, H_ext, "%", "| Int", "%.1f°C"%T_int, H_int, "%")
+
+    # De temps en temps on envoie les températures sur le téléphone :
+    if iteration%3 == 0:
+        message = "Ext=" + "%.1f°C"%T_ext + " ; Int=" + "%.1f°C"%T_int
+        ps = subprocess.run(["kdeconnect-cli", "--device", ID_MOBILE, "--ping-msg", message])
 
     # On ajoute ces mesures à la fin du fichier CSV
     mon_csv = open(NOM_FICHIER, "a")
@@ -89,9 +98,6 @@ while True:
 
         message = ">>> Température cible atteinte ! " + "%.1f°C"%T_ext
         print(message)
-
-        # Alerte sur le téléphone portable s'il est connecté :
-        ps = subprocess.run(["kdeconnect-cli", "--ping", "--device", ID_MOBILE, "2>", "/dev/null"])
 
         if ps.returncode == 0:
             ps = subprocess.run(["kdeconnect-cli", "--device", ID_MOBILE, "--ping-msg", message])
