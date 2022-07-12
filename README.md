@@ -36,10 +36,10 @@ Références :
 
 ## Configuration
 
-créez un fichier `perso_beewi.py` sur le modèle de `defaut_beewi.py` et paramétrez-le :
+Créez un fichier `perso_beewi.py` sur le modèle de `defaut_beewi.py` et paramétrez-le :
 
-* `INTERVALLE` : intervalle en seconces entre les mesures.
-* `ID_MOBILE` : identifiant KDE Connect de votre téléphone portable ou tablette. Vous pouvez l'obtenir avec la commande `kdeconnect-cli -l`.
+* `INTERVALLE` : intervalle en secondes entre les mesures.
+* `ID_MOBILE` : identifiant KDE Connect de votre téléphone portable ou tablette. Vous pouvez l'obtenir avec la commande `kdeconnect-cli -l`
 * `SON` : chemin du fichier son à utiliser pour l'alerte sur ordinateur.
 * `CAPTEUR_EXT` et `CAPTEUR_INT` : adresses MAC des deux capteurs Bluetooth, que vous pouvez obtenir avec la commande :
 

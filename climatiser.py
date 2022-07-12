@@ -19,7 +19,7 @@ import os
 import subprocess
 
 # On essaie de charger votre fichier perso_beewi.py qui contient vos paramètres
-# sinon on se rabbat sur le fichier par défaut publié sur GitHub :
+# sinon on se rabat sur le fichier par défaut publié sur GitHub :
 try:
     from perso_beewi import CAPTEUR_EXT, CAPTEUR_INT, SON, INTERVALLE, ID_MOBILE
 except ImportError:
