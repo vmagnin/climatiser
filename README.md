@@ -78,6 +78,14 @@ Le fichier `climatiser.csv` contient quelques informations supplémentaires tell
 ```
 On pourra l'utiliser pour tracer les courbes de température et d'humidité à l'aide d'une application telle que LibreOffice ou gnuplot.
 
+## Où placer les capteurs BeeWi ?
+
+Mesurer une température est moins simple qu'il n'y paraît. En intérieur, on placera idéalement le capteur loin du sol et des murs qui peuvent avoir emmagasiné de la chaleur, et à une hauteur d'environ 1,50 m, loin bien sûr de toute source de chaleur et sans exposition possible au soleil.
+
+En extérieur, les capteurs doivent être idéalement loin des murs et des sols bétonnés, donc des habitations, et loin des arbres. On pourra s'inspirer des [abris Stevenson](https://fr.wikipedia.org/wiki/Abri_Stevenson) utilisés pour les mesures météorologiques. Ces abris sont peints en blanc et protègent les instruments à la fois du soleil et des intempéries, tout en laissant circuler l'air à travers des doubles persiennes. La porte est orientée vers le nord. Et les thermomètres doivent être à une hauteur comprise entre 1,25 et 2 m.
+
+Voir également : https://www.canada.ca/fr/environnement-changement-climatique/services/meteo-a-oeil/visite-instruments-meteo/thermometres-thermistors.html
+
 ## Aspects techniques
 
 ### Options des commandes
