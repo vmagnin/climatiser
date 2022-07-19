@@ -86,6 +86,14 @@ En extérieur, les capteurs doivent être idéalement loin des murs et des sols 
 
 Voir également : https://www.canada.ca/fr/environnement-changement-climatique/services/meteo-a-oeil/visite-instruments-meteo/thermometres-thermistors.html
 
+## Limitations des capteurs BeeWi BBW200
+
+Il ne faut pas confondre la précision de l'affichage (0,1°C) et la précision de la mesure. D'après leur manuel, les BBW200 ont une précision de mesure *typique* de ±0,5°C, et dans le pire des cas de ±1°C. Mais pour l'application que nous visons, le paramètre important est le différentiel entre les deux capteurs. Dans mon cas, les deux capteurs posés l'un à côté de l'autre donnent des températures qui diffèrent de 0,2°C ou 0,3°C. Cela reste négligeable quand il s'agit de décider à quel moment de la journée il faut ouvrir ou fermer les fenêtres. Et on mettra à l'extérieur le capteur qui donne la plus grande valeur.
+
+On pourrait calibrer ces capteurs, mais il faudrait disposer d'un thermomètre dont on est sûr de la précision. Or, si l'on dispose plusieurs thermomètres les uns à côtés des autres, les mesures s'étaleront facilement sur une plage de 1°C.
+
+Concernant les mesures d'[humidité relative](https://fr.wikipedia.org/wiki/Humidit%C3%A9_relative), la notice annonce une précision de ±4,5 %, ce qui correspond à l'écart que j'observe typiquement entre mes deux capteurs.
+
 ## Aspects techniques
 
 ### Options des commandes
