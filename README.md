@@ -1,6 +1,6 @@
 # climatiser.py
 
-Un script python utilisant deux capteurs de température/humidité BeeWi SmartClim pour comparer les températures intérieure et extérieure, avec alerte quand les deux sont égales (utile lors des canicules). Vous pouvez trouver ces capteurs pour environ 23 € pièce. Ils fonctionnent avec deux piles AAA.
+Un script python utilisant deux capteurs de température/humidité BeeWi SmartClim BBW200 pour comparer les températures intérieure et extérieure, avec alerte quand les deux sont égales (utile lors des canicules). Ces capteurs fonctionnent avec deux piles AAA. En juillet 2022, ils deviennent difficiles à trouver mais sont encore disponibles par exemple sur Rakuten ou [Conkt.me](https://conkt.me/pdt/capteur-dhumidite-connecte-bbw200-beewi/).
 
 Le script affiche les données des deux capteurs à intervalles réguliers et les enregistre dans un fichier au format CSV.
 
@@ -115,7 +115,7 @@ Ce petit projet a été inspiré par l'article suivant, qui va beaucoup plus loi
 
 ## Références
 
-* Notice des capteurs BeeWi SmartClim : https://www.otio.com/produits/otiohome/environnement1/capteur-de-temperature-et-dhumidite-connecte/#support
+* [Notice des capteurs BeeWi SmartClim](https://fccid.io/pdf.php?id=2321904)
 * La librairie utilisée pour lire les capteurs : https://github.com/alemuro/beewi_smartclim
 * Un autre projet similaire, multi-langages : https://github.com/enrimilan/BeeWi-BBW200-Reader
 * Sur la commande `bluetoothctl` : https://www.linux-magazine.com/Issues/2017/197/Command-Line-bluetoothctl
